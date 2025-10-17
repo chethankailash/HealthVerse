@@ -1,0 +1,78 @@
+@import "tailwindcss";
+
+@import "react-calendar/dist/Calendar.css";
+
+
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Needed for 3D card flip */
+.perspective {
+  perspective: 1000px;
+}
+
+.transform-style-preserve-3d {
+  transform-style: preserve-3d;
+}
+
+.rotate-y-180 {
+  transform: rotateY(180deg);
+}
+
+.backface-hidden {
+  backface-visibility: hidden;
+}
+
+.fc .fc-toolbar-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #e5e7eb;
+}
+
+.fc-theme-standard td,
+.fc-theme-standard th {
+  border-color: #374151;
+}
+
+.fc-daygrid-day {
+  background-color: #1f2937;
+  transition: background-color 0.2s;
+}
+
+.fc-daygrid-day:hover {
+  background-color: #2a3442;
+}
+
+.fc-daygrid-day-number {
+  color: #9ca3af;
+  font-size: 0.9rem;
+}
+
+.fc-event {
+  border-radius: 0.4rem;
+  padding: 2px 4px;
+}
+
